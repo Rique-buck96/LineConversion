@@ -7,3 +7,7 @@ C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj
 C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.csproj.GenerateResource.Cache
 C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.exe
 C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.pdb
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\bin\Debug\TextFormat.exe.config
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\Debug\TextFormat.exe
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\Debug\TextFormat.pdb
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\Debug\TextFormat.csprojResolveAssemblyReference.cache

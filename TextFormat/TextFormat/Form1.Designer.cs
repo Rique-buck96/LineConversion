@@ -37,9 +37,10 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(34, 220);
+            this.btnOpen.Location = new System.Drawing.Point(51, 338);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.Size = new System.Drawing.Size(112, 35);
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
@@ -49,18 +50,20 @@
             // 
             this.lstSingleLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lstSingleLine.FormattingEnabled = true;
-            this.lstSingleLine.Location = new System.Drawing.Point(34, 43);
-            this.lstSingleLine.MultiColumn = true;
+            this.lstSingleLine.ItemHeight = 20;
+            this.lstSingleLine.Location = new System.Drawing.Point(51, 66);
+            this.lstSingleLine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstSingleLine.Name = "lstSingleLine";
-            this.lstSingleLine.Size = new System.Drawing.Size(291, 145);
+            this.lstSingleLine.Size = new System.Drawing.Size(436, 222);
             this.lstSingleLine.TabIndex = 1;
             // 
             // btnSort
             // 
             this.btnSort.Enabled = false;
-            this.btnSort.Location = new System.Drawing.Point(142, 220);
+            this.btnSort.Location = new System.Drawing.Point(213, 338);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.Size = new System.Drawing.Size(112, 35);
             this.btnSort.TabIndex = 2;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 249);
+            this.button1.Location = new System.Drawing.Point(51, 383);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -81,13 +85,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 288);
+            this.ClientSize = new System.Drawing.Size(621, 443);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.lstSingleLine);
             this.Controls.Add(this.btnOpen);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

@@ -8,6 +8,7 @@ namespace TextFormat
     public partial class Form1 : Form
     {
        public string TextString;
+
         public Form1()
         {
             InitializeComponent();
@@ -89,23 +90,64 @@ namespace TextFormat
 
             replace = replace.Replace("\t", string.Empty);   //removes tabbed characters
 
+            replace = replace.Replace(" ", string.Empty);   //removes white space
+
             var matches = Regex.Matches(replace, "^(.+)$", RegexOptions.Multiline);
-            
+
+            TextString = replace;
 
             foreach (Match match in matches)
             {
                
                 foreach (Capture capture in match.Captures)
                 {
+                  
                     lstSingleLine.Items.Add(capture.Value);
                 } 
             }
 
         }
 
+        private void AssignToProperty()
+        {
+            string[] toProperty = new string[]
+            {
+                TextString
+            };
+            foreach (string example in toProperty)
+            {
+                string firstWords = FirstWords(example, 7);
+            }
+        }
+
+        public static string FirstWords(string input, int numberWords)
+        {
+            var properties = new Text.Users();
+            try
+            {
+                int words = numberWords;
+                
+                for(int i = 0; i < input.Length; i++)
+                {
+                    if (input[i] == ' ')
+                        words--;
+                    if (words == 0)
+                        return input.Substring(0, i);
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("could not get substring");
+            }
+            return string.Empty;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ConvertToSingle();
         }
+
+
     }
 }

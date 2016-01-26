@@ -1,0 +1,9 @@
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\bin\x86\Debug\TextFormat.exe.config
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\bin\x86\Debug\TextFormat.exe
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\bin\x86\Debug\TextFormat.pdb
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\x86\Debug\TextFormat.csprojResolveAssemblyReference.cache
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\x86\Debug\TextFormat.Form1.resources
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\x86\Debug\TextFormat.Properties.Resources.resources
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\x86\Debug\TextFormat.csproj.GenerateResource.Cache
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\x86\Debug\TextFormat.exe
+C:\Users\Rique\Documents\GitHub\LineConversion\TextFormat\TextFormat\obj\x86\Debug\TextFormat.pdb

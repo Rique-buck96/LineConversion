@@ -1,0 +1,9 @@
+c:\users\enrique\documents\visual studio 2015\Projects\TextFormat\TextFormat\bin\Debug\TextFormat.exe.config
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\bin\Debug\TextFormat.exe
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\bin\Debug\TextFormat.pdb
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.csprojResolveAssemblyReference.cache
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.Form1.resources
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.Properties.Resources.resources
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.csproj.GenerateResource.Cache
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.exe
+C:\Users\Enrique\Documents\Visual Studio 2015\Projects\TextFormat\TextFormat\obj\Debug\TextFormat.pdb

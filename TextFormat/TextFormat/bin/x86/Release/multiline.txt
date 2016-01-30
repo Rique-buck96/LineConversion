@@ -1,0 +1,37 @@
+
+title:		Mr
+firstName:	Bilbo
+surname:	Baggins
+room:		Tower9-L18-Blue
+phone:		324
+logon:		bilbob
+
+
+
+title:		Miss
+firstName:	Hermione
+surname:	Granger
+room:		Tower6-L4-Pink
+phone:		812
+logon:		hermioneg
+
+title:      Ms
+firstName:  Edna
+surname:    Krabappel
+room:	    Tower2-L44-Grey
+phone:		123
+logon:		ednak
+
+title:		Mr
+firstName:	Slarti
+surname:	Bartfast
+room:	Tower0-L0-Black
+phone:	945
+logon:	slartib
+
+title:		Mrs         
+firstName:	Hyacinth
+surname:	Bucket					
+room:		Tower4-L6-Purple
+phone:		578
+logon:		hyacinthb

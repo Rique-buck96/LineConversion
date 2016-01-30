@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using TextFormat.Properties;
+using TextFormat.Text;
 
 namespace TextFormat
 {
     public partial class Form1 : Form
     {
-       public string TextString;
-
+        private readonly TextFile _textFile = new TextFile();
+        private List<Users> _users;
         public Form1()
         {
             InitializeComponent();
@@ -23,131 +27,72 @@ namespace TextFormat
         {
             try
             {
-                using (var reader = new StreamReader("multiline.txt"))
-                {
-                    var line = await reader.ReadToEndAsync();
-                    MessageBox.Show(line);
-                    TextString = line;
-                }
+                _textFile.ReadTextFile();
             }
-           catch
-           {
-               MessageBox.Show("Read failed.\nPlease choose the appropriate file");
-               openFileDialog1.InitialDirectory = @"C:\\";
-               openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-               openFileDialog1.FilterIndex = 2;
-               openFileDialog1.RestoreDirectory = true;
+             catch
+            {
+                MessageBox.Show(Resources.FileOpenFail);
+                openFileDialog1.InitialDirectory = @"C:\\";
+                openFileDialog1.Filter = Resources.TextFilter;
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
 
-               if (openFileDialog1.ShowDialog() == DialogResult.OK) //Displays the file dialogue, if the file cannot be found
-               {
-                   Stream stream;
-                   if ((stream = openFileDialog1.OpenFile()) != null)
-                   {
-                       using (var reader = new StreamReader(stream))
-                       {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK) //Displays the file dialogue, if the file cannot be found
+                {
+                    Stream stream;
+                    if ((stream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (var reader = new StreamReader(stream))
+                        {
                             var line = await reader.ReadToEndAsync();
                             MessageBox.Show(line);
-                            TextString = line;
+                            _textFile.TextString = line;
                         }
-                   }
-               }
-           }
+                    }
+                }
+            }
         }
 
         /// <summary>
-        /// Transforms the multiline text to single line
+        /// Transforms multiline to single line
         /// </summary>
-        private void ConvertToSingle()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnTransform_Click(object sender, EventArgs e)
         {
-            var replace = TextString;
-
-            //note: optimise decision statement
-                if (replace.Contains("surname"))
-                {
-                replace = replace.Replace("surname:", string.Empty);
-                    
-                }
-                if (replace.Contains("title"))
-                {
-                    replace = replace.Replace("title:", string.Empty);
-                }
-                if (replace.Contains("room"))
-                {
-                    replace = replace.Replace("room:", string.Empty);
-                }
-                if (replace.Contains("phone"))
-                {
-                    replace = replace.Replace("phone:", string.Empty);
-                }
-                if (replace.Contains("firstName"))
-                {
-                    replace = replace.Replace("firstName:", string.Empty);
-                }
-                if (replace.Contains("logon"))
-                {
-                    replace = replace.Replace("logon:", string.Empty);
-                }
-
-            replace = replace.Replace("\t", string.Empty);   //removes tabbed characters
-
-            replace = replace.Replace(" ", string.Empty);   //removes white space
-
-            var matches = Regex.Matches(replace, "^(.+)$", RegexOptions.Multiline);
-
-            TextString = replace;
+            _textFile.FormatMultiline();
+            var matches = Regex.Matches(_textFile.TextString, "^(.+)$", RegexOptions.Multiline);
+            var userStrings = new List<string>();
 
             foreach (Match match in matches)
+                userStrings.AddRange(from Capture capture in match.Captures select capture.Value);
+
+            while(userStrings.Count > 0)
             {
-               
-                foreach (Capture capture in match.Captures)
+                _users = new List<Users> {new Users(
+                    userStrings[0], 
+                    userStrings[1], 
+                    userStrings[2], 
+                    userStrings[3],
+                    userStrings[4],
+                    userStrings[5])};
+              
+                userStrings.RemoveRange(0, 6);
+
+                foreach (var line in _users.Select(user => user.Surname + "   " +
+                                                           user.FirstName  + "   " +
+                                                           user.Title  + "   " +
+                                                           user.Logon  + "   " +
+                                                           user.Room  + "   " +
+                                                           user.Phone))
                 {
-                  
-                    lstSingleLine.Items.Add(capture.Value);
-                } 
-            }
-
-        }
-
-        private void AssignToProperty()
-        {
-            string[] toProperty = new string[]
-            {
-                TextString
-            };
-            foreach (string example in toProperty)
-            {
-                string firstWords = FirstWords(example, 7);
-            }
-        }
-
-        public static string FirstWords(string input, int numberWords)
-        {
-            var properties = new Text.Users();
-            try
-            {
-                int words = numberWords;
-                
-                for(int i = 0; i < input.Length; i++)
-                {
-                    if (input[i] == ' ')
-                        words--;
-                    if (words == 0)
-                        return input.Substring(0, i);
+                    //string replacement = Regex.Replace(line, @"\s", "   ");
+                    lstSingleLine.Items.Add(line);
+                   
                 }
             }
 
-            catch
-            {
-                MessageBox.Show("could not get substring");
-            }
-            return string.Empty;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ConvertToSingle();
-        }
-
 
     }
 }

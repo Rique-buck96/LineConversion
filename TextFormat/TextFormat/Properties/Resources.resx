@@ -114,4 +114,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FileOpenFail" xml:space="preserve">
+    <value>Read failed.
+Please choose the appropriate file</value>
+    <comment>Failure message if a file cannot be opened.</comment>
+  </data>
+  <data name="TextFilter" xml:space="preserve">
+    <value>txt files (*.txt)|*.txt|All files (*.*)|*.*</value>
+    <comment>TextFilter to find text files</comment>
+  </data>
 </root>

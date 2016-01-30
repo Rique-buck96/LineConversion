@@ -51,6 +51,7 @@ namespace TextFormat
                     }
                 }
             }
+            btnTransform.Enabled = true;
         }
 
         /// <summary>
@@ -86,9 +87,7 @@ namespace TextFormat
                                                            user.Room  + "   " +
                                                            user.Phone))
                 {
-                    //string replacement = Regex.Replace(line, @"\s", "   ");
                     lstSingleLine.Items.Add(line);
-                   
                 }
             }
 

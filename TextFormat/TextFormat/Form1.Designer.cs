@@ -50,6 +50,7 @@
             // 
             // btnTransform
             // 
+            this.btnTransform.Enabled = false;
             this.btnTransform.Location = new System.Drawing.Point(123, 194);
             this.btnTransform.Name = "btnTransform";
             this.btnTransform.Size = new System.Drawing.Size(97, 23);

@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static System.String;
 
@@ -42,17 +41,9 @@ namespace TextFormat.Text
 
             replace = replace.Replace("\t", Empty); 
             replace = replace.Replace("\r", Empty);
-
             replace = replace.Replace(" ", Empty);
         
             TextString = replace;
-        }
-
-        public string RemoveSpace(string input)
-        {
-            var trimmedLine = input.Trim();
-            return trimmedLine;
-        }
-        
+        } 
     }
 }
